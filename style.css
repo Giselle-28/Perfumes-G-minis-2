@@ -1,0 +1,540 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fffbe6;
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header superior negro */
+.top-header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Contenedor de navegación blanco que queda fijo */
+.main-header {
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  flex: 1;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: black;
+}
+
+.search-bar {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 0.6rem 1rem;
+  border: 1px solid black;
+  border-radius: 30px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search-bar button {
+  margin-left: -40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.menu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #f54990; /* color rosa personalizado */
+}
+.carrito-panel {
+position: fixed;
+top: 0;
+right: 0;
+width: 320px;
+height: 100%;
+background: #fff4c4;
+box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+padding: 20px;
+transform: translateX(100%);
+transition: transform 0.3s ease-in-out;
+z-index: 1000;
+display: flex;
+flex-direction: column;
+font-family: 'Arial', sans-serif;
+}
+
+.carrito-panel h3 {
+margin-top: 0;
+font-size: 24px;
+color: #070606;
+text-align: center;
+}
+
+.carrito-panel p {
+margin: 10px 0;
+font-size: 16px;
+color: #444;
+}
+
+.carrito-panel button {
+background-color: #f4c802;
+color:white;
+border: none;
+padding: 8px 12px;
+margin: 5px 2px;
+border-radius: 6px;
+cursor: pointer;
+font-size: 14px;
+}
+
+.carrito-panel button:hover {
+background-color: #f5ca06;
+}
+
+#lista-productos p {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.oculto {
+display: none;
+}
+
+.abierto {
+transform: translateX(0%);
+}
+
+
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1588096742984-e02f11c3b2a4?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo-container img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%; /* Hace la imagen circular */
+  border: 5px solid white; /* Borde decorativo opcional */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+  margin-bottom: 20px;
+}
+
+.logo-container h2 {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Para que se lea sobre el fondo */
+}
+
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.slider {
+  overflow: hidden;
+  width: 100%;
+  background: #f9f9f9;
+  padding: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(300px * 6); /* Ancho = tamaño imagen * cantidad de imágenes */
+  animation: scroll 20s linear infinite;
+}
+
+.slider img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  margin: 0 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Animación */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px){
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+  .menu {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+  #productos {
+      padding: 2rem;
+      background-color: #fdfdfd;
+    }
+    
+    #productos h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #333;
+    }
+    
+    .productos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    
+    .producto {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    
+    .producto img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    
+    .producto h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .producto p {
+      color: #090306;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    
+    .producto button {
+      background-color: #e3c023;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    .producto button:hover {
+      background-color: #e3c023;
+    }
+    .catalogo {
+      background-color: #fff4c4;
+      padding: 2rem;
+      text-align: center;
+      border: 1px solid #ddd;
+      margin: 0.0rem auto 2rem auto; /* solo 1rem de margen arriba */
+      border-radius: 12px;
+      max-width: 1500px;
+    }
+    
+    .catalogo h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #2c1c00;
+      margin-bottom: 1.5rem;
+    }
+    
+    .filtros {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .btn-filtro {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border: 2px solid #fdd835;
+      background-color: white;
+      color: #2c1c00;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-filtro:hover {
+      background-color: #fdd835;
+      color: white;
+    }
+    
+    .btn-filtro.activo {
+      background-color: #fdd835;
+      color: white;
+    }
+    
+    #contacto {
+      background-color: #fff4c4;
+      padding: 2rem;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      max-width: 1500px;
+      margin: 2rem auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    #contacto h2 {
+      font-size: 2rem;
+      color: #2b2b2b;
+      margin-bottom: 1rem;
+    }
+    
+    #contacto p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+    
+    .redes {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    
+    .redes a {
+      font-size: 1.8rem;
+      color: #2b2b2b;
+      transition: color 0.3s;
+    }
+    
+    .redes a:hover {
+      color: #f54990;
+    }
+    /* Estilo para el footer */
+  footer {
+      background-color: #000; /* Fondo gris claro */
+      text-align: center;
+      padding: 20px;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      margin-top: 50px;
+    }
+    
+    footer p {
+      font-size: 14px;
+      margin: 0;
+    }
+    
+    /* Estilo para el carrito flotante */
+    .carrito-flotante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #f54990; /* Rosa fuerte */
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+      transition: background-color 0.3s ease;
+    }
+    
+    .carrito-flotante:hover {
+      background-color: #e0427c; /* Rosa más oscuro al pasar el ratón */
+    }
+    
+    /* Estilo para el toast */
+    .toast {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    
+    .toast.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    .toast.mostrar {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    
+    .product {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+    
+    .product button {
+      background: linear-gradient(to right, #d4af37, #f5e2a9);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    .product button:hover {
+      background: linear-gradient(to right, #c49e2d, #e5d39c);
+    }
+
+    .filtros-catalogo {
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    
+    .filtros-catalogo button {
+      background-color: white;
+      border: 2px solid gold;
+      color: #2c1f0b;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .filtros-catalogo button:hover {
+      background-color: gold;
+      color: white;
+    }
+    
+    .filtros-catalogo button.activo {
+      background-color: gold !important;
+      color: white !important;
+    }
+    
+    .cart-content {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 999;
+    }
+    
+    /* Mostrar con animación cuando se pasa el mouse */
+    .carrito-flotante:hover + .cart-content,
+    .cart-content:hover {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    

@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfumes Géminis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Header superior negro -->
+   <div class="top-header">
+    <p>COMPRÁ EN 3 Y 6 CUOTAS SIN INTERÉS</p>
+  </div>
+
+  <!-- Barra de navegación blanca -->
+  <header class="main-header">
+    <nav class="nav-container">
+      <div class="logo">
+        <span>Géminis</span>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar en catálogo">
+        <button><span>🔍</span></button>
+      </div>
+
+      <ul class="menu">
+        <li><a href="#producto">Producto</a></li>
+        <li><a href="#carrito">Carrito</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div id="carrito-panel" class="carrito-panel oculto">
+        <h3>Tu Carrito</h3>
+        <div id="lista-productos"></div>
+        <p>Total: <span id="total">$0.00</span></p>
+        <button onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
+        <button onclick="toggleCarrito()">Cerrar</button>
+      </div>
+      
+    </nav>
+    
+  </header>
+  <section class="hero">
+    <div class="logo-container">
+      <img src="/img/Imagen de WhatsApp 2025-05-03 a las 12.53.41_ba507c9f.jpg" alt="Logo Gemini's Perfumes" />
+      <h2>Perfumes Árabes Exclusivos</h2>
+    </div>
+  </section>
+  
+  <section class="slider">
+    <div class="slider-track">
+      <img src="img/olena-bohovyk-GZLuNKxbVWQ-unsplash.jpg" alt="Perfume 1" />
+      <img src="img/nolan-kent-aZM1ng82J40-unsplash.jpg" alt="Perfume 2" />
+      <img src="img/laura-chouette-jmACQEf7T2A-unsplash.jpg" alt="Perfume 3" />
+      <!-- Opcional: repite las imágenes para que el loop sea más suave -->
+      <img src="img/olena-bohovyk-GZLuNKxbVWQ-unsplash.jpg" alt="Perfume 1" />
+      <img src="img/nolan-kent-aZM1ng82J40-unsplash.jpg" alt="Perfume 2" />
+      <img src="img/laura-chouette-jmACQEf7T2A-unsplash.jpg" alt="Perfume 3" />
+    </div>
+  </section>
+
+  
+  
+  <main>
+    <section class="catalogo">
+        <h2>Nuestro Catálogo</h2>
+        <div class="filtros-catalogo">
+          <button onclick="filtrarCategoria('todos')" id="btn-todos" class="activo">Todos</button>
+    <button onclick="filtrarCategoria('masculino')" id="btn-masculino">Masculinos</button>
+    <button onclick="filtrarCategoria('femenino')" id="btn-femenino">Femeninos</button>
+    <button onclick="filtrarCategoria('unisex')" id="btn-unisex">Unisex</button>
+        </div>
+    </section>
+      
+    <section id="productos">
+        <h2>Nuestros Perfumes</h2>
+        <div class="products" id="products-container"></div>
+          <!-- Agrega más productos según necesites -->
+        </div>
+    </section>
+
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Email: contacto@perfumeria.com</p>
+        <p>WhatsApp: +54 9 11 1234-5678</p>
+        <div class="redes">
+          <a href="https://es-la.facebook.com/login/device-based/regular/login/"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a>
+        </div>
+      </section>
+      
+  </main>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Perfumería. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="carrito-flotante" id="ver-carrito" onclick="enviarWhatsApp()">Ver Pedido 🛒</div>
+  <div class="toast" id="toast">Producto agregado ✅</div>
+  <script src="script.js"></script>
+  
+</body>
+</html>

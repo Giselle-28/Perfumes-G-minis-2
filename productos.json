@@ -1,0 +1,50 @@
+[
+  {
+    "nombre": "Musk Royal",
+    "precio": 15000,
+    "imagen": "https://images.unsplash.com/photo-1612198474038-3b8b67604c4e?auto=format&fit=crop&w=400&q=60",
+    "tipo": "masculino"
+  },
+  {
+    "nombre": "Oud Imperial",
+    "precio": 18000,
+    "imagen": "https://images.unsplash.com/photo-1600180758890-a04fcd35b0f3?auto=format&fit=crop&w=400&q=60",
+    "tipo": "masculino"
+  },
+  {
+    "nombre": "Amber Sun",
+    "precio": 13500,
+    "imagen": "https://images.unsplash.com/photo-1600180758724-f8fc8b5ae636?auto=format&fit=crop&w=400&q=60",
+    "tipo": "femenino"
+  },
+  {
+    "nombre": "Velvet Musk",
+    "precio": 16000,
+    "imagen": "https://images.unsplash.com/photo-1632253150935-61a2e1efce89?auto=format&fit=crop&w=400&q=60",
+    "tipo": "unisex"
+  },
+  {
+    "nombre": "Musk Royal",
+    "precio": 15000,
+    "imagen": "https://images.unsplash.com/photo-1612198474038-3b8b67604c4e?auto=format&fit=crop&w=400&q=60",
+    "tipo": "masculino"
+  },
+  {
+    "nombre": "Oud Imperial",
+    "precio": 18000,
+    "imagen": "https://images.unsplash.com/photo-1600180758890-a04fcd35b0f3?auto=format&fit=crop&w=400&q=60",
+    "tipo": "masculino"
+  },
+  {
+    "nombre": "Amber Sun",
+    "precio": 13500,
+    "imagen": "https://images.unsplash.com/photo-1600180758724-f8fc8b5ae636?auto=format&fit=crop&w=400&q=60",
+    "tipo": "femenino"
+  },
+  {
+    "nombre": "Velvet Musk",
+    "precio": 16000,
+    "imagen": "https://images.unsplash.com/photo-1632253150935-61a2e1efce89?auto=format&fit=crop&w=400&q=60",
+    "tipo": "unisex"
+  }
+]
