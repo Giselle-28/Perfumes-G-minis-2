@@ -4,19 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Perfumes Géminis</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <!-- Header superior negro -->
-   <div class="top-header">
-    <p>COMPRÁ EN 3 Y 6 CUOTAS SIN INTERÉS</p>
-  </div>
+  
 
   <!-- Barra de navegación blanca -->
   <header class="main-header">
     <nav class="nav-container">
       <div class="logo">
-        <span>Géminis</span>
+        <img src="img/logo-geminis.jpg" alt="Logo Géminis" />
       </div>
 
       <div class="search-bar">
@@ -24,11 +25,17 @@
         <button><span>🔍</span></button>
       </div>
 
+
       <ul class="menu">
         <li><a href="#producto">Producto</a></li>
-        <li><a href="#carrito">Carrito</a></li>
+        <li>
+            <a href="#carrito">Carrito</a>
+            <span id="contador-menu" class="contador-carrito">0</span> <!-- Contador de productos -->
+        </li>
         <li><a href="#contacto">Contacto</a></li>
-      </ul>
+    </ul>
+
+
       <div id="carrito-panel" class="carrito-panel oculto">
         <h3>Tu Carrito</h3>
         <div id="lista-productos"></div>
@@ -42,8 +49,8 @@
   </header>
   <section class="hero">
     <div class="logo-container">
-      <img src="/img/Imagen de WhatsApp 2025-05-03 a las 12.53.41_ba507c9f.jpg" alt="Logo Gemini's Perfumes" />
-      <h2>Perfumes Árabes Exclusivos</h2>
+      <img src="/img/imagen-centro.jpg" alt="Logo Gemini's Perfumes" />
+      <h2>Perfumes Exclusivos</h2>
     </div>
   </section>
   
@@ -86,17 +93,47 @@
         <div class="redes">
           <a href="https://es-la.facebook.com/login/device-based/regular/login/"><i class="fab fa-facebook"></i></a>
           <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
-          <a href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a>
         </div>
       </section>
       
   </main>
+  
+
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Perfumería. Todos los derechos reservados.</p>
+  <footer class="bg-dark text-white text-center text-lg-start mt-5">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Perfumes Géminis</h5>
+          <p>Tu fragancia ideal te espera. Encuentra perfumes únicos para cada ocasión.</p>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Enlaces rápidos</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#" class="text-white">Inicio</a></li>
+            <li><a href="#catalogo" class="text-white">Catálogo</a></li>
+            <li><a href="#carrito" class="text-white">Carrito</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Seguinos</h5>
+          <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3 bg-secondary">
+      © 2025 Perfumes Géminis. Todos los derechos reservados.
+    </div>
   </footer>
 
-  <div class="carrito-flotante" id="ver-carrito" onclick="enviarWhatsApp()">Ver Pedido 🛒</div>
+  
+  <!-- Botón flotante WhatsApp -->
+  <div class="carrito-flotante" id="ver-carrito" onclick="enviarWhatsApp()">
+    <i class="bi bi-whatsapp"></i>
+  </div>
   <div class="toast" id="toast">Producto agregado ✅</div>
   <script src="script.js"></script>
   

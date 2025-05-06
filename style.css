@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #fffbe6;
@@ -11,24 +18,11 @@ body {
   to { opacity: 1; }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: Arial, sans-serif;
-}
 
-/* Header superior negro */
-.top-header {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 0.5rem;
-  font-size: 0.9rem;
-}
+
+
+
 
 /* Contenedor de navegación blanco que queda fijo */
 .main-header {
@@ -49,11 +43,16 @@ body {
   flex-wrap: wrap;
 }
 
-.logo {
-  flex: 1;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: black;
+.logo img {
+  width: 80px;         /* Ajusta el tamaño del logo */
+  height: 80px;        /* Asegura que el alto sea igual al ancho */
+  border-radius: 50%;  /* Hace la imagen completamente redonda */
+  object-fit: cover;   /* Asegura que la imagen se recorte bien dentro del círculo */
+}
+
+.logo img {
+  width: 80px; /* Ajusta el tamaño del logo */
+  height: auto; /* Mantiene la proporción original de la imagen */
 }
 
 .search-bar {
@@ -99,6 +98,36 @@ body {
 .menu li a:hover {
   color: #f54990; /* color rosa personalizado */
 }
+
+@keyframes parpadeo {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.contador-carrito {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: 5px;
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
 .carrito-panel {
 position: fixed;
 top: 0;
@@ -164,7 +193,7 @@ transform: translateX(0%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 80vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -389,6 +418,8 @@ transform: translateX(0%);
     .redes a:hover {
       color: #f54990;
     }
+
+    
     /* Estilo para el footer */
   footer {
       background-color: #000; /* Fondo gris claro */
@@ -404,24 +435,24 @@ transform: translateX(0%);
       margin: 0;
     }
     
-    /* Estilo para el carrito flotante */
+    /* Estilo para el carrito flotante (LOGO WHATSAPP) */
     .carrito-flotante {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #f54990; /* Rosa fuerte */
+      background-color: #5ebe41; 
       color: white;
       padding: 10px 20px;
       border-radius: 50px;
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
       transition: background-color 0.3s ease;
     }
     
     .carrito-flotante:hover {
-      background-color: #e0427c; /* Rosa más oscuro al pasar el ratón */
+      background-color: #3ee938; 
     }
     
     /* Estilo para el toast */
@@ -452,6 +483,8 @@ transform: translateX(0%);
     html {
       scroll-behavior: smooth;
     }
+
+    
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -538,3 +571,164 @@ transform: translateX(0%);
       transform: translateY(0);
     }
     
+  
+    
+    .filtros-catalogo button.activo {
+      background-color: #343a40;
+      color: white;
+    }
+    
+    #ver-carrito {
+      display: none;
+    }
+    
+    #toast {
+      display: none;
+    }
+    
+    #carrito-panel.abierto {
+      display: block !important;
+    }
+    #carrito-panel.oculto {
+      display: none;
+    }
+    
+   /* Footer elegante */
+footer {
+  background: #343a40;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer h5 {
+  margin-bottom: 15px;
+  color: #ffc107;
+}
+
+footer a {
+  color: #dee2e6;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+  
+
+
+/* ============================
+   ESTILOS RESPONSIVOS
+   ============================ */
+
+/* Estilos generales para móviles */
+@media (max-width: 768px) {
+  /* HERO */
+  .hero {
+    height: 60vh;
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-container img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .logo-container h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* SLIDER DE IMÁGENES */
+  .slider {
+    overflow-x: auto;
+  }
+
+  .slider-track {
+    width: auto;
+    animation: none;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+  }
+
+  .slider img {
+    width: 200px;
+    height: 280px;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+
+  /* CATÁLOGO Y PRODUCTOS */
+  .productos-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .producto {
+    width: 90%;
+  }
+
+  .catalogo {
+    padding: 1rem;
+  }
+
+  .btn-filtro {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+  }
+
+  /* CARRITO FLOTANTE */
+  .carrito-flotante {
+    padding: 10px;
+    font-size: 14px;
+    bottom: 10px;
+    right: 10px;
+    width: 90%;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+
+  /* BOTÓN ENVIAR PEDIDO */
+  .carrito-flotante button {
+    width: 100%;
+    font-size: 16px;
+    padding: 0.75rem;
+  }
+
+  /* PIE DE PÁGINA */
+  footer {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
+
+/* Extra pequeño (menos de 480px) */
+@media (max-width: 480px) {
+  .logo-container img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .logo-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .slider img {
+    width: 160px;
+    height: 220px;
+  }
+}
