@@ -1,106 +1,150 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Perfumes Géminis</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfumes Géminis - Fragancias Exclusivas</title>
+  <!-- SEO mejorado -->
+  <meta name="description" content="Descubre fragancias exclusivas en Perfumes Géminis. Perfumes importados, nacionales y alternativas a las grandes marcas con la mejor calidad.">
+  <!-- Favicon -->
+  <link rel="icon" href="img/logo-geminis.jpg" type="image/jpeg">
+  <!-- Fuentes Google adicionales para un aspecto premium -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- CSS personalizado -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-
-  <!-- Barra de navegación blanca -->
-  <header class="main-header">
-    <nav class="nav-container">
+  <!-- Cabecera -->
+  <header class="main-header shadow-sm">
+    <nav class="nav-container container">
       <div class="logo">
-        <img src="img/logo-geminis.jpg" alt="Logo Géminis" />
+        <a href="#">
+          <img src="img/logo-geminis.jpg" alt="Logo Perfumes Géminis" class="img-fluid">
+        </a>
       </div>
+      
+      <button id="hamburger-toggle" class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <div class="search-bar">
-        <input type="text" placeholder="Buscar en catálogo">
-        <button><span>🔍</span></button>
+        <input type="text" id="search-input" placeholder="Buscar perfumes..." class="form-control">
+        <button id="search-button" class="btn-search"><i class="fas fa-search"></i></button>
       </div>
 
-
-      <ul class="menu">
-        <li><a href="#producto">Producto</a></li>
-        <li>
-            <a href="#carrito">Carrito</a>
-            <span id="contador-menu" class="contador-carrito">0</span> <!-- Contador de productos -->
+      <!-- Menú de navegación (colapsable en mobile) -->
+      <ul class="menu" id="menu-nav">
+        <li class="nav-item"><a href="#producto" class="nav-link">Catálogo</a></li>
+        <li class="nav-item position-relative">
+          <a href="#" id="carrito-link" class="nav-link">Carrito</a>
+          <span id="contador-menu" class="contador-carrito badge">0</span>
         </li>
-        <li><a href="#contacto">Contacto</a></li>
-    </ul>
-
+        <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
 
       <div id="carrito-panel" class="carrito-panel oculto">
-        <h3>Tu Carrito</h3>
-        <div id="lista-productos"></div>
-        <p>Total: <span id="total">$0.00</span></p>
-        <button onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
-        <button onclick="toggleCarrito()">Cerrar</button>
+        <div class="carrito-header">
+          <h3 class="mb-0">Tu Carrito</h3>
+          <button class="close-carrito btn-sm" onclick="cerrarCarrito()">Cerrar</button>
+        </div>
+        <div id="lista-productos" class="py-2"></div>
+        <div class="carrito-footer">
+          <p class="d-flex justify-content-between">
+            <span>Total:</span>
+            <span id="total" class="fw-bold">$0.00</span>
+          </p>
+          <button class="btn-enviar w-100" onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
+        </div>
       </div>
       
     </nav>
     
   </header>
-  <section class="hero">
+
+  <!-- Sección Hero con imagen de fondo -->
+  <section class="hero d-flex align-items-center justify-content-center text-center">
     <div class="logo-container">
-      <img src="/img/imagen-centro.jpg" alt="Logo Gemini's Perfumes" />
-      <h2>Perfumes Exclusivos</h2>
+      <img src="img/imagen-centro.jpg" alt="Logo Gemini's Perfumes" class="img-fluid hero-logo mb-4" />
+      <h2 class="display-4 text-white mb-3">Perfumes Exclusivos</h2>
+      <p class="hero-tagline lead text-white">Encuentra tu fragancia ideal</p>
     </div>
   </section>
   
-  <section class="slider">
+  <!-- Slider de imágenes con capacidad de swipe -->
+  <section class="slider py-5">
     <div class="slider-track">
-      <img src="img/olena-bohovyk-GZLuNKxbVWQ-unsplash.jpg" alt="Perfume 1" />
-      <img src="img/nolan-kent-aZM1ng82J40-unsplash.jpg" alt="Perfume 2" />
-      <img src="img/laura-chouette-jmACQEf7T2A-unsplash.jpg" alt="Perfume 3" />
-      <!-- Opcional: repite las imágenes para que el loop sea más suave -->
-      <img src="img/olena-bohovyk-GZLuNKxbVWQ-unsplash.jpg" alt="Perfume 1" />
-      <img src="img/nolan-kent-aZM1ng82J40-unsplash.jpg" alt="Perfume 2" />
-      <img src="img/laura-chouette-jmACQEf7T2A-unsplash.jpg" alt="Perfume 3" />
+      <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=80" alt="Perfume 1" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1596742578443-7682ef5251cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=80" alt="Perfume 2" loading="lazy" />
+      <img src="https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Perfume 3" loading="lazy" />
+      <!-- Repite imágenes para slider infinito -->
+      <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=80" alt="Perfume 1" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1596742578443-7682ef5251cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=80" alt="Perfume 2" loading="lazy" />
+      <img src="https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Perfume 3" loading="lazy" />
     </div>
   </section>
 
-  
-  
   <main>
-    <section class="catalogo">
-        <h2>Nuestro Catálogo</h2>
-        <div class="filtros-catalogo">
-          <button onclick="filtrarCategoria('todos')" id="btn-todos" class="activo">Todos</button>
-    <button onclick="filtrarCategoria('masculino')" id="btn-masculino">Masculinos</button>
-    <button onclick="filtrarCategoria('femenino')" id="btn-femenino">Femeninos</button>
-    <button onclick="filtrarCategoria('unisex')" id="btn-unisex">Unisex</button>
+    <!-- Sección de catálogo con filtros -->
+    <section class="catalogo container shadow-lg" id="producto">
+      <div class="row">
+        <div class="col-12 text-center mb-4">
+          <h2 class="display-5">Nuestro Catálogo</h2>
+          <p class="lead catalogo-descripcion text-muted">Descubre nuestra selección exclusiva de fragancias</p>
         </div>
+      </div>
+      <div class="filtros-catalogo mb-5">
+        <button onclick="filtrarCategoria('todos')" id="btn-todos" class="btn activo">Todos</button>
+        <button onclick="filtrarCategoria('masculino')" id="btn-masculino" class="btn">Masculinos</button>
+        <button onclick="filtrarCategoria('femenino')" id="btn-femenino" class="btn">Femeninos</button>
+        <button onclick="filtrarCategoria('unisex')" id="btn-unisex" class="btn">Unisex</button>
+      </div>
     </section>
-      
-    <section id="productos">
-        <h2>Nuestros Perfumes</h2>
-        <div class="products" id="products-container"></div>
-          <!-- Agrega más productos según necesites -->
-        </div>
+    
+    <!-- Contenedor de productos -->
+    <section id="productos" class="container py-4">
+      <div class="products row" id="products-container">
+        <!-- Los productos se cargarán dinámicamente desde script.js -->
+      </div>
     </section>
 
-      <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Email: contacto@perfumeria.com</p>
-        <p>WhatsApp: +54 9 11 1234-5678</p>
-        <div class="redes">
-          <a href="https://es-la.facebook.com/login/device-based/regular/login/"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+    <!-- Sección de contacto (sin formulario) -->
+    <section id="contacto" class="container shadow-lg my-5">
+      <div class="row">
+        <div class="col-12 text-center mb-4">
+          <h2 class="display-5">Contacto</h2>
         </div>
-      </section>
-      
+      </div>
+      <div class="contacto-container">
+        <div class="contacto-info shadow-sm p-4">
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <p><i class="fas fa-envelope"></i> contacto@perfumeria.com</p>
+              <p><i class="fab fa-whatsapp"></i> +54 9 11 6015-7837</p>
+            </div>
+            <div class="col-md-6 mb-4">
+              <p><i class="fas fa-clock"></i> Lunes a Viernes: 9:00 - 18:00</p>
+              <p><i class="fas fa-clock"></i> Sábados: 9:00 - 13:00</p>
+            </div>
+          </div>
+          <div class="redes mt-4">
+            <a href="https://es-la.facebook.com/" target="_blank" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok" class="social-link"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
   </main>
   
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center text-lg-start mt-5">
+  <!-- Footer con Bootstrap -->
+  <footer class="text-white text-center text-lg-start mt-5">
     <div class="container p-4">
       <div class="row">
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
@@ -112,29 +156,33 @@
           <h5 class="text-uppercase">Enlaces rápidos</h5>
           <ul class="list-unstyled mb-0">
             <li><a href="#" class="text-white">Inicio</a></li>
-            <li><a href="#catalogo" class="text-white">Catálogo</a></li>
-            <li><a href="#carrito" class="text-white">Carrito</a></li>
+            <li><a href="#producto" class="text-white">Catálogo</a></li>
+            <li><a href="#contacto" class="text-white">Contacto</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Seguinos</h5>
-          <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+          <h5 class="text-uppercase">Ubicación</h5>
+          <p class="text-light">Av. Corrientes 1234, CABA</p>
+          <p class="text-light">Buenos Aires, Argentina</p>
         </div>
       </div>
     </div>
-    <div class="text-center p-3 bg-secondary">
-      © 2025 Perfumes Géminis. Todos los derechos reservados.
+    <div class="text-center p-3">
+      © <span id="current-year"></span> Perfumes Géminis. Todos los derechos reservados.
     </div>
   </footer>
 
-  
   <!-- Botón flotante WhatsApp -->
-  <div class="carrito-flotante" id="ver-carrito" onclick="enviarWhatsApp()">
-    <i class="bi bi-whatsapp"></i>
+  <div class="whatsapp-flotante shadow-lg" id="ver-carrito" onclick="enviarWhatsApp()">
+    <i class="fab fa-whatsapp"></i>
   </div>
+
+  <!-- Toast notification -->
   <div class="toast" id="toast">Producto agregado ✅</div>
+  
+  <!-- Incluir Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
   
 </body>

@@ -1,50 +1,66 @@
 [
   {
-    "nombre": "Musk Royal",
-    "precio": 15000,
-    "imagen": "https://images.unsplash.com/photo-1612198474038-3b8b67604c4e?auto=format&fit=crop&w=400&q=60",
-    "tipo": "masculino"
+    "id": 1,
+    "nombre": "Blue De Channel",
+    "precio": 2500,
+    "imagen": "https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "tipo": "masculino",
+    "descripcion": "Una fragancia fresca y elegante para hombres."
   },
   {
-    "nombre": "Oud Imperial",
-    "precio": 18000,
-    "imagen": "https://images.unsplash.com/photo-1600180758890-a04fcd35b0f3?auto=format&fit=crop&w=400&q=60",
-    "tipo": "masculino"
+    "id": 2,
+    "nombre": "Miss Dior",
+    "precio": 2800,
+    "imagen": "https://www.dior.com/on/demandware.static/-/Library-Sites-DiorSharedLibrary/default/dw012aee55/images/beauty/01-FRAGRANCES/2024/MISS-DIOR_2024/PARFUM/LAUNCHPAGE/MD_Parfum_Mood_Hero_E-merch_2250x3000.jpg",
+    "tipo": "femenino",
+    "descripcion": "Un perfume floral y sofisticado para mujeres."
   },
   {
-    "nombre": "Amber Sun",
-    "precio": 13500,
-    "imagen": "https://images.unsplash.com/photo-1600180758724-f8fc8b5ae636?auto=format&fit=crop&w=400&q=60",
-    "tipo": "femenino"
+    "id": 3,
+    "nombre": "CK One",
+    "precio": 1900,
+    "imagen": "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "tipo": "unisex",
+    "descripcion": "Una fragancia fresca y unisex para todos."
   },
   {
-    "nombre": "Velvet Musk",
-    "precio": 16000,
-    "imagen": "https://images.unsplash.com/photo-1632253150935-61a2e1efce89?auto=format&fit=crop&w=400&q=60",
-    "tipo": "unisex"
+    "id": 4,
+    "nombre": "Sauvage",
+    "precio": 3200,
+    "imagen": "https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80",
+    "tipo": "masculino",
+    "descripcion": "Un perfume intenso y masculino con notas amaderadas."
   },
   {
-    "nombre": "Musk Royal",
-    "precio": 15000,
-    "imagen": "https://images.unsplash.com/photo-1612198474038-3b8b67604c4e?auto=format&fit=crop&w=400&q=60",
-    "tipo": "masculino"
+    "id": 5,
+    "nombre": "Bloom",
+    "precio": 2900,
+    "imagen": "https://images.pexels.com/photos/3059609/pexels-photo-3059609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "tipo": "femenino",
+    "descripcion": "Una fragancia floral y elegante para mujeres."
   },
   {
-    "nombre": "Oud Imperial",
-    "precio": 18000,
-    "imagen": "https://images.unsplash.com/photo-1600180758890-a04fcd35b0f3?auto=format&fit=crop&w=400&q=60",
-    "tipo": "masculino"
+    "id": 6,
+    "nombre": "Luna",
+    "precio": 2100,
+    "imagen": "https://images.pexels.com/photos/14205342/pexels-photo-14205342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "tipo": "unisex",
+    "descripcion": "Un perfume suave con notas cítricas y amaderadas."
   },
   {
-    "nombre": "Amber Sun",
-    "precio": 13500,
-    "imagen": "https://images.unsplash.com/photo-1600180758724-f8fc8b5ae636?auto=format&fit=crop&w=400&q=60",
-    "tipo": "femenino"
+    "id": 7,
+    "nombre": "Gentleman",
+    "precio": 2750,
+    "imagen": "https://images.pexels.com/photos/6621462/pexels-photo-6621462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "tipo": "masculino",
+    "descripcion": "Una fragancia clásica y elegante para hombres."
   },
   {
-    "nombre": "Velvet Musk",
-    "precio": 16000,
-    "imagen": "https://images.unsplash.com/photo-1632253150935-61a2e1efce89?auto=format&fit=crop&w=400&q=60",
-    "tipo": "unisex"
+    "id": 8,
+    "nombre": "La Vie Est Belle",
+    "precio": 3100,
+    "imagen": "https://images.pexels.com/photos/8128069/pexels-photo-8128069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "tipo": "femenino",
+    "descripcion": "Un perfume dulce y sofisticado para mujeres."
   }
 ]
